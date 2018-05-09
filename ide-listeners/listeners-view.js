@@ -13,7 +13,7 @@ exports.getView = function() {
 			"id":"listeners",
 			"name":"Listeners",
 			"factory":"frame",
-			"region":"center-bottom",
+			"region":"center-middle",
 			"label":"Listeners",
 			"link":"../ide-listeners/listeners.html"
 	};
