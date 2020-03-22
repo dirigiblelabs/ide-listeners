@@ -15,7 +15,7 @@ exports.getView = function() {
 			"factory":"frame",
 			"region":"center-middle",
 			"label":"Listeners",
-			"link":"../ide-listeners/listeners.html"
+			"link":"../ide-listeners/view/listeners.html"
 	};
 	return view;
-}
+};
