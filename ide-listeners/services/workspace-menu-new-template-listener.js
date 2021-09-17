@@ -8,12 +8,11 @@
  * Contributors:
  *   SAP - initial API and implementation
  */
-exports.getTemplate = function() {
-	var view = {
-			"name":"listener",
-			"label":"Message Listener",
-			"extension":"listener",
-			"data":JSON.stringify(JSON.parse('{"name":"/myproject/mylistener","type":"Q","handler":"myproject/myhandler.js","description":"My Listener"}'), null, 2)
+exports.getTemplate = function () {
+	return {
+		"name": "listener",
+		"label": "Message Listener",
+		"extension": "listener",
+		"data": JSON.stringify(JSON.parse('{"name":"/myproject/mylistener","type":"Q","handler":"myproject/myhandler.js","description":"My Listener"}'), null, 2)
 	};
-	return view;
 };

@@ -8,15 +8,14 @@
  * Contributors:
  *   SAP - initial API and implementation
  */
-exports.getEditor = function() {
-	var editor = {
-			"id":"listener",
-			"name":"Listener",
-			"factory":"frame",
-			"region":"center-top",
-			"label":"Listener",
-			"link":"../ide-listeners/editor/editor.html",
-			"contentTypes":["application/json+listener"]
+exports.getEditor = function () {
+	return {
+		"id": "listener",
+		"name": "Listener",
+		"factory": "frame",
+		"region": "center-top",
+		"label": "Listener",
+		"link": "../ide-listeners/editor/editor.html",
+		"contentTypes": ["application/json+listener"]
 	};
-	return editor;
 };

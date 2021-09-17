@@ -9,13 +9,12 @@
  *   SAP - initial API and implementation
  */
 angular.module('listeners', [])
-.controller('ListenersController', ['$scope', '$http', function ($scope, $http) {
+	.controller('ListenersController', ['$scope', '$http', function ($scope, $http) {
 
-	$http.get('../../../ops/listeners').then(function(response) {
-		$scope.listenersList = response.data;
+		$http.get('/services/v4/ops/listeners').then(function (response) {
+			$scope.listenersList = response.data;
+		});
+
+	}]).config(function ($sceProvider) {
+		$sceProvider.enabled(false);
 	});
-
-
-}]).config(function($sceProvider) {
-    $sceProvider.enabled(false);
-});
