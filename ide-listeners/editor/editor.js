@@ -46,7 +46,7 @@ angular.module('page', ["ideUI", "ideView"])
 				contents = JSON.stringify($scope.listener, null, 4);
 				$scope.state.isBusy = false;
 			}
-		}
+		};
 
 		function saveContents(text) {
 			let xhr = new XMLHttpRequest();
