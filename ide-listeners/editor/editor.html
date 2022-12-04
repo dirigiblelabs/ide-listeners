@@ -16,12 +16,12 @@
         <script type="text/javascript" src="editor.js"></script>
     </head>
 
-    <body class="dg-vbox dg-center__horizontal" fd-scrollbar>
+    <body class="fd-padding dg-vbox dg-center__horizontal" fd-scrollbar>
         <fd-busy-indicator-extended class="dg-fill-parent" ng-hide="state.error || !state.isBusy" dg-size="l">
             {{state.busyText}}
         </fd-busy-indicator-extended>
         <div class="dg-restrict-width dg-full-width" ng-show="!state.error && !state.isBusy">
-            <fd-fieldset class="fd-margin--md" ng-form="forms.editor">
+            <fd-fieldset ng-form="forms.editor">
                 <fd-form-group dg-header="Listener:" name="entityForm">
                     <fd-form-item horizontal="false">
                         <fd-form-label for="idName" dg-required="true" dg-colon="true">Name</fd-form-label>
@@ -67,8 +67,8 @@
                     </fd-form-item>
                 </fd-form-group>
             </fd-fieldset>
-            <fd-button class="fd-margin-begin-end--md fd-margin-bottom--sm" compact="true" dg-type="emphasized"
-                dg-label="Save" ng-click="save()" state="{{ forms.editor.$valid ? '' : 'disabled'  }}">
+            <fd-button class="fd-margin-top-bottom--sm" compact="true" dg-type="emphasized" dg-label="Save"
+                ng-click="save()" state="{{ forms.editor.$valid ? '' : 'disabled'  }}">
             </fd-button>
         </div>
         <fd-message-page glyph="sap-icon--error" ng-if="state.error">
